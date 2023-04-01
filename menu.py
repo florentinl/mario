@@ -9,46 +9,49 @@ class Menu:
         self.options = options
         self.selection = 0
 
-        self.police_option = pygame.font.Font("pixel.ttf", 50)
-        self.police_titre = pygame.font.Font("mario.ttf", 100)
+        # La police s'appelle "pixel.ttf" et taille 50
+        self.police_option = "Au travail !"
+        # La police s'appelle "mario.ttf" et taille 100
+        self.police_titre = "Au travail !"
 
-        self.champi_rouge = pygame.image.load("images/champi_rouge.png")
-        self.champi_rouge = pygame.transform.scale(
-            self.champi_rouge, (50, 50))
+        self.champi_rouge = "Au travail !"  # Charger l'image "champi_rouge.png
+        # Redimensionner l'image à 50x50 (même taille que les options)
+        self.champi_rouge = "Au travail !"
 
-        self.champi_gris = pygame.image.load("images/champi_gris.png")
-        self.champi_gris = pygame.transform.scale(
-            self.champi_gris, (50, 50))
+        self.champi_gris = "Au travail !"  # Charger l'image "champi_gris.png
+        self.champi_gris = "Au travail !" # Redimensionner l'image à 50x50
 
-        self.fond = pygame.image.load("images/fond.png")
+        self.fond = "Au travail !"  # Charger l'image "fond.png
 
     def afficher_fond(self):
         # Récupérer la hauteur de l'écran
-        hauteur = self.ecran.get_height()
+        hauteur = "Au travail !"
 
         # Récupérer les dimensions de l'image
-        hauteur_image = self.fond.get_height()
-        largeur_image = self.fond.get_width()
+        hauteur_image = "Au travail !"
+        largeur_image = "Au travail !"
 
         # Redimensionner l'image
-        fond = pygame.transform.scale(
-            self.fond, (hauteur * largeur_image / hauteur_image, hauteur))
+
+        # fond = pygame.transform.scale(
+        #    self.fond, (hauteur * largeur_image / hauteur_image, hauteur))
 
         # Afficher l'image
-        self.ecran.blit(fond, (0, 0))
+        "Au travail !"  # Afficher l'image en haut à gauche
 
     def afficher_titre(self, titre):
         # Récupérer la hauteur et la largeur de l'écran
-        largeur = self.ecran.get_width()
+        """
 
-        surface = self.police_titre.render(titre, False, (255, 0, 0))
-        self.ecran.blit(
-            surface, (largeur // 2 - surface.get_width() // 2, 100))
+        Au travail !
+        attention le texte doit être centré horizontalement
+
+        """
 
     def afficher_options(self):
         # Récupérer la hauteur et la largeur de l'écran
-        hauteur = self.ecran.get_height()
-        largeur = self.ecran.get_width()
+        hauteur = "Au travail !"
+        largeur = "Au travail !"
 
         # Afficher les options
         # Pour chaque option, on créé un rectangle
@@ -80,18 +83,18 @@ class Menu:
         self.afficher_fond()
 
         # Afficher le titre
-        self.afficher_titre("Mario")
+        # self.afficher_titre("Mario")
 
         # Afficher les options
-        self.afficher_options()
+        # self.afficher_options()
 
     def gerer_evenement(self, evenement) -> str | None:
         if evenement.type == pygame.KEYDOWN:
             if evenement.key == pygame.K_UP:
-                self.selection = (self.selection - 1) % len(self.options)
+                "Au travail !"
                 return None
             elif evenement.key == pygame.K_DOWN:
-                self.selection = (self.selection + 1) % len(self.options)
+                "Au travail !"
                 return None
             elif evenement.key == pygame.K_RETURN:
                 return self.options[self.selection]
